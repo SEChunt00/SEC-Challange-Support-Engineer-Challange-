@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+read -p "Inserisci qui il percorso o il nome della directory: " dir_name
+cd $dir_name && find . -type f | wc * 2>/dev/null | sort -u
+exec bash

@@ -1,0 +1,8 @@
+#!/bin/bash
+read -p "Inserisci qui il percorso o il nome della directory: " dir_name
+read -p "Stringa da cercare in tutti i file presenti nella directory : " stringa_1
+read -p "Dopo averla cercata, sostiruirla in tutti i file presenti nella directory con: " stringa_2
+echo "";
+cd $dir_name && find . -maxdepth 1 -type f -execdir sed -i s/$stringa_1/$stringa_2/g {} +;
+echo "Done!";
+exec bash

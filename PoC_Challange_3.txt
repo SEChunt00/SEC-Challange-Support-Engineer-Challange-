@@ -1,0 +1,12 @@
+1.Backup e invio:
+
+#!/bin/sh
+
+rsync -e 'ssh -p 22' -avzp /home/user user@192.168.1.100:/home/user/backups
+
+
+2.Cron job con riferimento la serata di Domenica:
+
+0 20 0 0 sun esercizio3.sh
+
+
